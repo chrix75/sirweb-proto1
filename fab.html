@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flotte Automobile</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+    <style>
+        .type .checkbox-inline {
+            padding-top: 0;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="margin-top: -7px" href="#">
+                        <img alt="Brand" src="img/qntl_lg_tm_hrz_rgb_pos.svg" style="width:150px">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <form class="form-horizontal col-md-12">
+            <!-- Types de véhicules -->
+            <div class="form-group type">
+                <label class="col-sm-2 control-label">Types de véhicules</label>
+                <div class="col-sm-10" style="margin-top: 6px">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Véhicules Utilitaires
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Véhicules Industriels
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Véhicules Particuliers
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox4" value="option4"> Transport en Commun
+                    </label>
+                </div>
+            </div>
+
+            <!-- Types d'energie -->
+            <div class="form-group type">
+                <label class="col-sm-2 control-label">Types d'énergie</label>
+                <div class="col-sm-10" style="margin-top: 6px">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="essence" value="option1"> Essence
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="gazole" value="option2"> Gazole
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="hybride" value="option3"> Hybride
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="electric" value="option4"> Electrique
+                    </label>
+                </div>
+            </div>
+
+            <!-- Age du parc -->
+            <div class="form-group">
+                <label for="ex2" class="col-sm-2 control-label">Age du parc</label>
+                <div class="col-sm-10" style="margin-top: 6px">
+                    <input id="ex2" type="text" class="span2" value="" data-slider-min="0" data-slider-max="10"
+                           data-slider-step="1" data-slider-value="[0,10]"/>
+                </div>
+            </div>
+
+            <!-- Taille du parc -->
+            <div class="form-group">
+                <label for="ex3" class="col-sm-2 control-label">Taille du parc</label>
+                <div class="col-sm-10" style="margin-top: 6px">
+                    <input id="ex3" type="text" class="span2" value="" data-slider-min="0" data-slider-max="60000"
+                           data-slider-step="1000" data-slider-value="[0,60000]"/>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Marque</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Marque</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Marque</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Marque</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>
+                            <input type="checkbox"  value="option1">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12">
+                    <button type="submit" class="btn btn-primary">Valider</button>
+                    <button type="button" class="btn btn-link">Annuler</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+
+    <script>
+        $("#ex3").slider({});
+
+        $("#ex2").slider({})
+            .on('slideStop', function (ev) {
+                console.log($("#ex2").slider('getValue'));
+            });
+
+
+    </script>
+</body>
+</html>

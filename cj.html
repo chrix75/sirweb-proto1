@@ -473,8 +473,10 @@
                     if (_.indexOf(self.selectedCjCodes, cj.code) === -1) {
                         if (self.filterValue.length > 0) {
                             if (!_.isNaN(_.toNumber(self.filterValue))) {
+                                // Selection is based upon the numeric code
                                 return (_.toString(cj.code).indexOf(self.filterValue) === 0);
                             } else {
+                                // Selection is based upon the cj label
                                 var cleanLabel = _.deburr(cj.label).toUpperCase();
                                 var cleanFilter =  _.deburr(self.filterValue).toUpperCase();
                                 return (cleanLabel.indexOf(cleanFilter) !== -1);

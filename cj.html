@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-slider.min.css">
 
+    <style>
+        .table-selection {
+            cursor: pointer;
+        }
+
+        .table-selection .numeric-code {
+            text-align: right;
+        }
+    </style>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -24,34 +34,36 @@
 
     <div class="row">
         <form id="cj" class="form-horizontal col-md-12">
+            <!-- Sélection des CJs -->
             <div class="form-group type">
                 <label class="col-sm-2 control-label">Catégories juridiques</label>
                 <div class="col-sm-offset-2 col-sm-10">
                     <ul>
-                        <li v-for="sel in selectedCjs">{{ sel.code }} - {{ sel.label }}</li>
+                        <li v-for="sel in selectedCjs"><button type="button" @click="removeCjCodeFromSelection(sel.code)" class="btn btn-link">Supprimer</button>{{ sel.code }} - {{ sel.label }}</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- CJs disponibles -->
             <div class="col-sm-offset-2 col-sm-10">
                 <span style="font-weight: bold">Liste des CJs disponibles</span>
-                <button class="btn btn-link">Masquer</button>
+                <button type="button" @click="toggleCjsTableVisibility()" class="btn btn-link">{{ cjsTableVisibilityLabel }}</button>
             </div>
-            <div class="col-sm-offset-2 col-sm-10">
+            <div v-if="cjsTableVisible" class="col-sm-offset-2 col-sm-10">
                 <div class="input-group">
                     <div class="input-group-addon ">Filtre</div>
                     <input v-model="filterValue" type="text" class="form-control" id="filterValue"
                            placeholder="Code, libellé">
 
                 </div>
-                <table class="table table-condensed table-hover">
+                <table class="table table-condensed table-hover table-selection">
                     <thead>
                     <th>Code</th>
                     <th>Libellé</th>
                     </thead>
                     <tbody>
-                    <tr v-for="cj in availableCjs" v-on:click="selectCj(cj.code)">
-                        <td>{{ cj.code }}</td>
+                    <tr v-for="cj in availableCjs" @click="selectCj(cj.code)">
+                        <td class="numeric-code">{{ cj.code }}</td>
                         <td>{{ cj.label }}</td>
                     </tr>
 
@@ -80,6 +92,8 @@
         el: "#cj",
         data: {
             filterValue: "",
+            cjsTableVisible: true,
+            cjsTableVisibilityLabel: 'Masquer',
             selectedCjCodes: [],
             cjs: [
                 {code: 1, label: "Entrepreneur individuel"},
@@ -480,6 +494,20 @@
             selectCj: function (code) {
                 console.log("Selected the code " + code);
                 this.selectedCjCodes.push(code);
+            },
+            removeCjCodeFromSelection: function (code) {
+                console.log('Remove the CJ with the code ' + code);
+                var i = _.indexOf(this.selectedCjCodes, code);
+                this.selectedCjCodes.splice(i, 1);
+            },
+            toggleCjsTableVisibility: function() {
+                if (this.cjsTableVisible) {
+                    this.cjsTableVisibilityLabel = 'Afficher';
+                } else {
+                    this.cjsTableVisibilityLabel = 'Masquer';
+                }
+
+                this.cjsTableVisible = !this.cjsTableVisible;
             }
         }
 

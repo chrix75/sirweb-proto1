@@ -450,20 +450,23 @@
         },
         computed: {
             availableCjs: function () {
+                this.filterValue;
+                this.cjs;
+                this.selectedCjs;
+
                 var self = this;
                 return _.filter(this.cjs, function (cj) {
-                    console.log(cj.label);
+                    if (_.indexOf(self.selectedCjCodes, cj.code) === -1) {
+                        if (self.filterValue.length > 0) {
+                            var cleanLabel = _.deburr(cj.label).toUpperCase();
+                            var cleanFilter =  _.deburr(self.filterValue).toUpperCase();
+                            return (cleanLabel.indexOf(cleanFilter) !== -1);
+                        }
 
-                    if (_.indexOf(self.selectedCjCodes, cj.code) == -1) {
                         return true;
-                    }
-
-                    if (self.filterValue.length > 0) {
-                        console.log("filterValue.length=" + self.filterValue.length);
+                    } else {
                         return false;
                     }
-
-                    return false;
                 });
             },
             selectedCjs: function() {
@@ -471,12 +474,6 @@
                 return _.filter(this.cjs, function (cj) {
                     return _.indexOf(self.selectedCjCodes, cj.code) != -1;
                 });
-            }
-        },
-        watch: {
-            filterValue: function(v) {
-                console.log("filterValue=[" + v + "]");
-                this.$forceUpdate();
             }
         },
         methods: {

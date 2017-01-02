@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recherche</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="margin-top: -7px" href="#">
+                        <img alt="Brand" src="img/qntl_lg_tm_hrz_rgb_pos.svg" style="width:150px">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <form>
+            <div class="form-group col-xs-12 col-sm-9 col-md-7 col-md-offset-2">
+                <input type="text" class="form-control" id="search"
+                       placeholder="SIRET, SIREN, Raison sociale">
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Filtrer <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="insee.html">Critères INSEE</a></li>
+                        <li><a href="#">XXXX (autres infos)</a></li>
+                        <li><a href="fab.html">Parc Automobile</a></li>
+                    </ul>
+                    <button onclick="window.location='results.html'" type="button" class="btn btn-primary">Rechercher</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

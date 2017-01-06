@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Régions / Départements / Villes</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+    <style>
+        .selection-link {
+            padding-top: 6px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="margin-top: -7px" href="#">
+                        <img alt="Brand" src="img/logo.svg" style="width:35px">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="cities" class="row">
+        <table class="table table-bordered">
+            <tr v-for="city in cities">
+                <td>Ville</td>
+                <td>{{ city.zipcode }} - {{ city.name }} <em>(CCI: {{ city.cci }})</em> </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
+
+    <script>
+        var citiesView = new Vue({
+            el: '#cities',
+            data: {
+                cities: [
+                    { cci: "40072", name: "CASTELNAU TURSAN", zipcode: 40320},
+                    { cci: "40073", name: "CASTELNER", zipcode: 40700},
+                    { cci: "40075", name: "CASTETS", zipcode: 40260},
+                    { cci: "40080", name: "CAZERES SUR L ADOUR", zipcode: 40270},
+                    { cci: "40082", name: "CLASSUN", zipcode: 40320},
+                    { cci: "40083", name: "CLEDES", zipcode: 40320},
+                    { cci: "40084", name: "CLERMONT", zipcode: 40180},
+                    { cci: "40093", name: "ESCALANS", zipcode: 40310}
+                ]
+            }
+        });
+
+    </script>
+</body>
+</html>
